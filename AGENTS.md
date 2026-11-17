@@ -8,6 +8,8 @@ Stack: Java 21, Spring Boot and Maven Wrapper; Vue 3, TypeScript and Vite; file-
 
 ## Specification-driven workflow
 
+- Write repository documentation, OpenSpec artifacts, decision logs, code comments and commit messages in English. Respond to the user in their preferred language.
+
 - Before implementation, read the relevant OpenSpec specifications and change. Agree on a new feature's plan before changing behavior.
 - Every task has an ID, such as PHOTO-001. Requirements have stable IDs, such as PHOTO-001-R1. Do not renumber accepted IDs when reordering documents.
 - Represent one user-visible outcome as one OpenSpec change, including backend, frontend and verification tasks as needed.
@@ -38,7 +40,7 @@ Stack: Java 21, Spring Boot and Maven Wrapper; Vue 3, TypeScript and Vite; file-
 - Run relevant tests, analyzers and builds. Before closing a task, execute the complete required gate against the final version.
 - Do not disable analyzers, lower thresholds, add exclusions or suppress findings merely to pass checks. Justified exceptions require a decision-log entry and review.
 - Use verification-before-completion before claiming completion. If the skill is unavailable, disclose that and still provide the results of checks actually performed.
-- Distinguish PASS, FAIL and NOT RUN. An unavailable analysis service is not a successful analysis.
+- Distinguish PASS, FAIL, NOT RUN and NOT APPLICABLE. Apply the scope rules in docs/quality.md. An unavailable required analysis service is NOT RUN, never NOT APPLICABLE or PASS.
 - Require a separate review. Self-review by the implementation agent does not replace it.
 - Archive a change only after blocking findings are resolved and acceptance is complete. OpenSpec document validation does not prove application correctness.
 

@@ -1,5 +1,19 @@
 # Quality policy
 
+## Applicability by change scope
+
+Define the applicable checks in the change design before implementation. The gates below apply to the affected scope, not to every tool regardless of what changed.
+
+- Application changes require affected code checks, tests, builds, configured SonarQube analysis and relevant Compose acceptance scenarios.
+- Build, CI, deployment or analyzer configuration changes require the checks and execution paths they affect; they are not exempt merely because they edit configuration.
+- Documentation-only changes require document consistency, links, whitespace and OpenSpec validation when applicable, plus separate review.
+- Narrow tooling-only changes such as Git ignore rules require positive and negative behavior checks, document/OpenSpec consistency, whitespace checks and separate review. Application builds, application analyzers, SonarQube and Compose are NOT APPLICABLE when neither application nor their configuration is changed.
+- Verification scripts require execution, including regression checks for changed behavior.
+
+Record each omitted check as NOT APPLICABLE with a scope-based reason. A required check that cannot execute remains NOT RUN and blocks completion. Do not use this distinction to bypass an affected check. SETUP-001 must establish and verify its promised tooling; missing tools are not an exemption from that task.
+
+For PRE-SETUP-001, the applicable gate consists of Git ignore behavior, script root-discovery regression checks, OpenSpec validation, document consistency, whitespace and separate review. No application or deployment is implemented by this task.
+
 ## Gate 1: ready for implementation
 
 - Scope and acceptance criteria are agreed.

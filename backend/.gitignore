@@ -1,0 +1,4 @@
+# PRE-SETUP-001-R3: Maven output at the backend root only.
+/target/
+
+# PRE-SETUP-001-R4: keep sources, test fixtures and all Maven Wrapper files.

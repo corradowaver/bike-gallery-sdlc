@@ -1,0 +1,10 @@
+# PRE-SETUP-001-R2: generated frontend dependencies, builds and test reports.
+/node_modules/
+/dist/
+/coverage/
+/.vite/
+/playwright-report/
+/test-results/
+*.tsbuildinfo
+
+# PRE-SETUP-001-R4: source files, package manifests and lockfiles stay trackable.

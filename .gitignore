@@ -1,0 +1,12 @@
+# PRE-SETUP-001-R1, PRE-SETUP-001-R4: local environment; keep example templates.
+.env
+.env.*
+!.env.example
+
+# PRE-SETUP-001-R1: local IDE, OS and log files at any depth.
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+*.log
